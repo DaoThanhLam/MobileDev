@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:id="@+id/main"
+    android:background="@color/white">
+
+    <!-- Toolbar -->
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/include_toolbar" />
+
+    <!-- Ảnh đại diện -->
+    <ImageView
+        android:id="@+id/imv_avatar"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_logo_employee" />
+
+    <!-- Nhóm 3 nút chức năng -->
+    <!-- Tên liên hệ -->
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên liên hệ"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp" />
+
+    <!-- Số điện thoại -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Gọi điện thoại -->
+        <ImageButton
+            android:id="@+id/btn_phone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_contact_phone_24"
+            android:contentDescription="Gọi điện"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/txt_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="18dp" />
+
+    </LinearLayout>
+
+
+    <!-- Email -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_sms"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Nhắn tin"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/email"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Email"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+    <!-- Đơn vị / Địa chỉ -->
+
+    <!-- Chức vụ -->
+    <TextView
+        android:id="@+id/txt_unit_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Đơn vị / Địa chỉ"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Chức vụ"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>
